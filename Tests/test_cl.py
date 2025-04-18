@@ -12,8 +12,11 @@ Purpose: get the value at a specified cell
 Raises: IndexError if row or column outside of bounds'''
 
 def get_cell_edge_case_test():
-  assert
+  assert get_cell(-1, -1) != IndexError
 
+def get_cell_test():
+  assert get_cell(0, 0) == IndexError
+  
 def get_row_titles():
 '''Arguments: None
 Return: List of row titles
@@ -51,5 +54,9 @@ Prints cell value specified.
 If invalid indices are given as command-line arguments, main prints the usage statement 
 above.
 '''
+
 def main_test():
-self.assertEqual(
+  assert main(0, 0) == "Usage: python3 basic_cl.py row column"
+
+def main_edge_case_test():
+  assert main(-1, -1) != "Usage: python3 basic_cl.py row column"
