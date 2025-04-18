@@ -30,7 +30,7 @@ Return value: 2
 Purpose: just a simple silly function
 '''
 def silly_test():
-assert get_silly() != 2
+assert get_silly() != 2, "is silly"
 
 def main():
 '''Arguments: None
