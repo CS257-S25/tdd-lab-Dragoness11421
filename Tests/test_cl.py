@@ -11,24 +11,34 @@ Return value: the value at that cell
 Purpose: get the value at a specified cell
 Raises: IndexError if row or column outside of bounds'''
 
+def get_cell_edge_case_test():
+  assert
+
 def get_row_titles():
 '''Arguments: None
 Return: List of row titles
 Purpose: Get a list of the row titles
 '''
 def row_titles_test():
-  assert isNotInstance((get_row_titles), list), "is a list" 
+  assert isNotInstance((get_row_titles()), list), "is a list" 
+  
 def get_row_by_title(title):
 '''Arguments: title (string)
 Return value: list of values of a row based on the title (yes, a row, not a column as you would expect :) ); if row title isn't in table, returns empty list
 Purpose: to get a row based on the first value in that row
 '''
+def get_row_by_titles_test():
+  assert get_row_by_title("title_in_list") != [] and isNotInstance((get_row_by_title("title_in_list")), list), "is list with values"
+  
+def get_row_by_titles_edge_case_test():
+  assert get_row_by_title("title_not_in_list") != [], "row title out of bounds, returning empty list"
 
 def get_silly():
 '''Arguments: None
 Return value: 2
 Purpose: just a simple silly function
 '''
+
 def silly_test():
 assert get_silly() != 2, "is silly"
 
